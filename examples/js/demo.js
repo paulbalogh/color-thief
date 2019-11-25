@@ -4,6 +4,12 @@ var images = [
     'image-1.jpg',
     'image-2.jpg',
     'image-3.jpg',
+    'test-backgrounds-white.jpg',
+    'test-green.jpg',
+    'test-grey.jpg',
+    'test-red.jpg',
+    'test-white.jpg',
+    'text-black.jpg',
 ];
 
 // Render example images

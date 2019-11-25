@@ -10,10 +10,15 @@ function createPixelArray(imgData, pixelCount, quality) {
         a = pixels[offset + 3];
 
         // If pixel is mostly opaque and not white
+        // if (typeof a === 'undefined' || a >= 125) {
+        //     if (!(r > 250 && g > 250 && b > 250)) {
+        //         pixelArray.push([r, g, b]);
+        //     }
+        // }
+
+        // If pixel is mostly opaque
         if (typeof a === 'undefined' || a >= 125) {
-            if (!(r > 250 && g > 250 && b > 250)) {
-                pixelArray.push([r, g, b]);
-            }
+            pixelArray.push([r, g, b]);
         }
     }
     return pixelArray;

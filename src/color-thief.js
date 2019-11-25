@@ -88,10 +88,11 @@ ColorThief.prototype.getPalette = function(sourceImage, colorCount, quality) {
     const imageData  = image.getImageData();
     const pixelCount = image.width * image.height;
 
-    const pixelArray = core.createPixelArray(imageData.data, pixelCount, options.quality);
+    const pixelArray = core.createPixelArray(imageData.data, pixelCount,  options.quality);
 
     // Send array to quantize function which clusters values
     // using median cut algorithm
+    // if (pixelArray.length === 0) { return [{r: 255, g: 255, b: 255}]};
     const cmap    = quantize(pixelArray, options.colorCount);
     const palette = cmap? cmap.palette() : null;
 
